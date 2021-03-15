@@ -1,0 +1,990 @@
+@font-face {
+  font-family: 'DOCALLISME';
+  src: url("../fonts/DOCALLISME ON STREET.ttf");
+}
+
+@-webkit-keyframes noise-anim {
+  0% {
+    clip: rect(53px, 9999px, 41px, 0);
+  }
+  5% {
+    clip: rect(64px, 9999px, 75px, 0);
+  }
+  10% {
+    clip: rect(43px, 9999px, 47px, 0);
+  }
+  15% {
+    clip: rect(36px, 9999px, 65px, 0);
+  }
+  20% {
+    clip: rect(94px, 9999px, 9px, 0);
+  }
+  25% {
+    clip: rect(24px, 9999px, 71px, 0);
+  }
+  30% {
+    clip: rect(87px, 9999px, 73px, 0);
+  }
+  35% {
+    clip: rect(65px, 9999px, 67px, 0);
+  }
+  40% {
+    clip: rect(23px, 9999px, 60px, 0);
+  }
+  45% {
+    clip: rect(5px, 9999px, 34px, 0);
+  }
+  50% {
+    clip: rect(67px, 9999px, 20px, 0);
+  }
+  55% {
+    clip: rect(13px, 9999px, 40px, 0);
+  }
+  60% {
+    clip: rect(9px, 9999px, 9px, 0);
+  }
+  65% {
+    clip: rect(23px, 9999px, 91px, 0);
+  }
+  70% {
+    clip: rect(95px, 9999px, 33px, 0);
+  }
+  75% {
+    clip: rect(8px, 9999px, 64px, 0);
+  }
+  80% {
+    clip: rect(33px, 9999px, 17px, 0);
+  }
+  85% {
+    clip: rect(7px, 9999px, 100px, 0);
+  }
+  90% {
+    clip: rect(52px, 9999px, 41px, 0);
+  }
+  95% {
+    clip: rect(25px, 9999px, 52px, 0);
+  }
+  100% {
+    clip: rect(69px, 9999px, 96px, 0);
+  }
+}
+
+@keyframes noise-anim {
+  0% {
+    clip: rect(53px, 9999px, 41px, 0);
+  }
+  5% {
+    clip: rect(64px, 9999px, 75px, 0);
+  }
+  10% {
+    clip: rect(43px, 9999px, 47px, 0);
+  }
+  15% {
+    clip: rect(36px, 9999px, 65px, 0);
+  }
+  20% {
+    clip: rect(94px, 9999px, 9px, 0);
+  }
+  25% {
+    clip: rect(24px, 9999px, 71px, 0);
+  }
+  30% {
+    clip: rect(87px, 9999px, 73px, 0);
+  }
+  35% {
+    clip: rect(65px, 9999px, 67px, 0);
+  }
+  40% {
+    clip: rect(23px, 9999px, 60px, 0);
+  }
+  45% {
+    clip: rect(5px, 9999px, 34px, 0);
+  }
+  50% {
+    clip: rect(67px, 9999px, 20px, 0);
+  }
+  55% {
+    clip: rect(13px, 9999px, 40px, 0);
+  }
+  60% {
+    clip: rect(9px, 9999px, 9px, 0);
+  }
+  65% {
+    clip: rect(23px, 9999px, 91px, 0);
+  }
+  70% {
+    clip: rect(95px, 9999px, 33px, 0);
+  }
+  75% {
+    clip: rect(8px, 9999px, 64px, 0);
+  }
+  80% {
+    clip: rect(33px, 9999px, 17px, 0);
+  }
+  85% {
+    clip: rect(7px, 9999px, 100px, 0);
+  }
+  90% {
+    clip: rect(52px, 9999px, 41px, 0);
+  }
+  95% {
+    clip: rect(25px, 9999px, 52px, 0);
+  }
+  100% {
+    clip: rect(69px, 9999px, 96px, 0);
+  }
+}
+
+@-webkit-keyframes noise-anim-2 {
+  0% {
+    clip: rect(35px, 9999px, 78px, 0);
+  }
+  5% {
+    clip: rect(73px, 9999px, 3px, 0);
+  }
+  10% {
+    clip: rect(27px, 9999px, 69px, 0);
+  }
+  15% {
+    clip: rect(12px, 9999px, 5px, 0);
+  }
+  20% {
+    clip: rect(23px, 9999px, 25px, 0);
+  }
+  25% {
+    clip: rect(51px, 9999px, 47px, 0);
+  }
+  30% {
+    clip: rect(53px, 9999px, 18px, 0);
+  }
+  35% {
+    clip: rect(56px, 9999px, 13px, 0);
+  }
+  40% {
+    clip: rect(4px, 9999px, 42px, 0);
+  }
+  45% {
+    clip: rect(52px, 9999px, 10px, 0);
+  }
+  50% {
+    clip: rect(23px, 9999px, 89px, 0);
+  }
+  55% {
+    clip: rect(9px, 9999px, 32px, 0);
+  }
+  60% {
+    clip: rect(100px, 9999px, 33px, 0);
+  }
+  65% {
+    clip: rect(67px, 9999px, 47px, 0);
+  }
+  70% {
+    clip: rect(29px, 9999px, 81px, 0);
+  }
+  75% {
+    clip: rect(35px, 9999px, 69px, 0);
+  }
+  80% {
+    clip: rect(6px, 9999px, 86px, 0);
+  }
+  85% {
+    clip: rect(97px, 9999px, 23px, 0);
+  }
+  90% {
+    clip: rect(75px, 9999px, 55px, 0);
+  }
+  95% {
+    clip: rect(60px, 9999px, 15px, 0);
+  }
+  100% {
+    clip: rect(91px, 9999px, 100px, 0);
+  }
+}
+
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(35px, 9999px, 78px, 0);
+  }
+  5% {
+    clip: rect(73px, 9999px, 3px, 0);
+  }
+  10% {
+    clip: rect(27px, 9999px, 69px, 0);
+  }
+  15% {
+    clip: rect(12px, 9999px, 5px, 0);
+  }
+  20% {
+    clip: rect(23px, 9999px, 25px, 0);
+  }
+  25% {
+    clip: rect(51px, 9999px, 47px, 0);
+  }
+  30% {
+    clip: rect(53px, 9999px, 18px, 0);
+  }
+  35% {
+    clip: rect(56px, 9999px, 13px, 0);
+  }
+  40% {
+    clip: rect(4px, 9999px, 42px, 0);
+  }
+  45% {
+    clip: rect(52px, 9999px, 10px, 0);
+  }
+  50% {
+    clip: rect(23px, 9999px, 89px, 0);
+  }
+  55% {
+    clip: rect(9px, 9999px, 32px, 0);
+  }
+  60% {
+    clip: rect(100px, 9999px, 33px, 0);
+  }
+  65% {
+    clip: rect(67px, 9999px, 47px, 0);
+  }
+  70% {
+    clip: rect(29px, 9999px, 81px, 0);
+  }
+  75% {
+    clip: rect(35px, 9999px, 69px, 0);
+  }
+  80% {
+    clip: rect(6px, 9999px, 86px, 0);
+  }
+  85% {
+    clip: rect(97px, 9999px, 23px, 0);
+  }
+  90% {
+    clip: rect(75px, 9999px, 55px, 0);
+  }
+  95% {
+    clip: rect(60px, 9999px, 15px, 0);
+  }
+  100% {
+    clip: rect(91px, 9999px, 100px, 0);
+  }
+}
+
+.glitch {
+  color: #f2f2f2;
+  position: relative;
+  font-size: 18px;
+  font-family: earlyMan;
+  font-weight: 500;
+}
+
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: #f2f2f2;
+  background: transparent;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: #f2f2f2;
+  background: transparent;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+.sct-login {
+  height: 100vh;
+  background: #1A1B1C;
+  color: #f2f2f2;
+}
+
+.sct-login .container-form {
+  border-radius: 10px;
+  background: #0d0d0d;
+  width: 60%;
+}
+
+.sct-login form {
+  width: 500px;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.sct-login form label {
+  color: #f2f2f2;
+}
+
+.sct-login form .container-email,
+.sct-login form .container-password {
+  border-bottom: white 2px solid;
+}
+
+.sct-login form input {
+  width: 250px;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: white;
+}
+
+.sct-login form i {
+  color: #f2f2f2;
+}
+
+.sct-login form button {
+  border: 1px solid #f2f2f2;
+  background: transparent;
+  padding: 5px 8px 5px 8px;
+  border-radius: 5px;
+  color: #f2f2f2;
+  width: 245px;
+}
+
+.sct-login form button:hover {
+  color: #F0F0F2;
+  background: #1E82D9;
+}
+
+.sct-login .img-login {
+  width: 500px;
+  height: 500px;
+  color: white;
+}
+
+.sct-login .img-login img {
+  width: 100%;
+}
+
+.sct-login .img-login button {
+  border: 1px solid #f2f2f2;
+  background: transparent;
+  padding: 5px 8px 5px 8px;
+  border-radius: 5px;
+  color: #f2f2f2;
+  width: 100px;
+}
+
+.sct-login .img-login button:hover {
+  color: #F0F0F2;
+  background: #1E82D9;
+}
+
+.sct-account-type .card {
+  border: 1px solid #1A1B1C;
+}
+
+.sct-account-type .card button {
+  border: 1px solid #f2f2f2;
+  background: #1E82D9;
+  padding: 5px 8px 5px 8px;
+  border-radius: 5px;
+  color: #F0F0F2;
+  width: 100px;
+}
+
+.sct-account-type .card button:hover {
+  color: #F0F0F2;
+  background: #000000;
+}
+
+.sct-registerUsers form i {
+  color: #000000;
+}
+
+.sct-registerUsers form button {
+  border: 1px solid #f2f2f2;
+  background: #1E82D9;
+  padding: 5px 8px 5px 8px;
+  border-radius: 5px;
+  color: #f2f2f2;
+  width: 300px;
+}
+
+.sct-registerUsers form button:hover {
+  color: #F0F0F2;
+  background: #0d0d0d;
+}
+
+.sct-registerArtist,
+.sct-registerAlbum,
+.sct-registerSong,
+.sct-modifySong {
+  height: 93vh;
+  background: #0d0d0d;
+  color: #f2f2f2;
+}
+
+.sct-registerArtist .container-img {
+  background-image: url("../img/22.png");
+  background-size: contain;
+  background-position: center;
+  background-color: #f2f2f2;
+  width: 300px;
+  height: 300px;
+}
+
+.sct-registerArtist .container-img img {
+  width: 100%;
+}
+
+.sct-registerArtist form {
+  width: 300px;
+  height: 300px;
+}
+
+.sct-registerAlbum .container-img {
+  background-image: url("../img/22.png");
+  background-size: contain;
+  background-position: center;
+  background-color: #f2f2f2;
+  width: 300px;
+  height: 300px;
+}
+
+.sct-registerAlbum .container-img img {
+  width: 100%;
+}
+
+.sct-registerAlbum form {
+  width: 300px;
+  height: 300px;
+}
+
+.sct-registerSong form {
+  width: 300px;
+  height: 300px;
+}
+
+.sct-modifySong .card {
+  background-color: blue;
+}
+
+.display-none {
+  display: none;
+}
+
+.header-principal {
+  background: #0d0d0d;
+  /*  .container-playlists {
+        overflow-y: scroll;
+        height: 200px;
+        padding-left: 5px;
+        line-height: 16px;
+        &::-webkit-scrollbar {
+            border: 2px solid $black_ternary;
+            border-radius: 8px;
+            width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #f2f2f2;
+            border-radius: 10px;
+            width: 10px;
+        }
+    }*/
+}
+
+.header-principal .logo img {
+  width: 100px;
+}
+
+.header-principal .add-playlist button {
+  width: 100%;
+  color: #f2f2f2;
+  background-color: #1A1B1C;
+  padding: 10px;
+  border: none;
+}
+
+.header-principal .add-playlist button span {
+  padding: 0 4px 0 4px;
+}
+
+.main-contenst {
+  width: 100%;
+  background: #000000;
+}
+
+.main-contenst .sct-app {
+  color: #f2f2f2;
+}
+
+.main-contenst .sct-app .container-fluid {
+  padding-left: 0px;
+  padding-bottom: 0px;
+}
+
+.main-contenst .sct-app .container-fluid .header-secundary {
+  width: 100%;
+}
+
+.main-contenst .sct-app .container-fluid .header-secundary nav {
+  height: 6vh;
+}
+
+.main-contenst .sct-app .container-fluid .header-secundary .container-pictureUser {
+  height: 4vh;
+  border-radius: 50%;
+}
+
+.main-contenst .sct-app .container-fluid .header-secundary .container-pictureUser img {
+  height: 4vh;
+  border-radius: 50%;
+}
+
+.main-contenst .sct-app .contents-user {
+  height: 94vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-contenst .sct-app .contents-admin {
+  height: 94vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-contenst .sct-app .contents-admin .tabs-contents {
+  height: 400px;
+}
+
+.main-contenst .sct-app .contents-admin .tabs-contents .nav-tabs {
+  border-bottom: none;
+}
+
+.main-contenst .sct-app .contents-admin .tabs-contents .nav-tabs .nav-link {
+  color: #f2f2f2;
+}
+
+.main-contenst .sct-app .contents-admin .tabs-contents .nav-tabs .nav-link:hover {
+  border-color: #21B3CF;
+  isolation: isolate;
+}
+
+.main-contenst .sct-app .contents-admin .tabs-contents .nav-tabs .nav-item.show .nav-link,
+.main-contenst .sct-app .contents-admin .tabs-contents .nav-tabs .nav-link.active {
+  color: #000000;
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.main-contenst .sct-app .contents-admin .tabs-contents .card {
+  color: #000000;
+  position: static;
+}
+
+.main-contenst .sct-app .contents-admin .tabs-contents .card:hover {
+  cursor: pointer;
+}
+
+.main-contenst .sct-app .contents-admin .tabs-contents .container-start {
+  margin: 8px;
+}
+
+.main-contenst .sct-app .contents-admin .tabs-contents .container-start .container-img {
+  width: 40%;
+}
+
+.main-contenst .sct-app .contents-admin .tabs-contents .container-start .container-img img {
+  width: 100%;
+}
+
+.main-contenst .sct-app .contents-admin .widgets-container {
+  margin: 6px;
+  width: 40%;
+}
+
+.main-contenst .sct-app .contents-admin .widgets-container p {
+  font-size: 50px;
+}
+
+.main-contenst .sct-app .contents-admin .widgets-container .widget-numberSons,
+.main-contenst .sct-app .contents-admin .widgets-container .widget-numberUsers,
+.main-contenst .sct-app .contents-admin .widgets-container .widget-numberAlbums {
+  background: #5C51A6;
+  border-radius: 20px;
+  width: 50%;
+  margin: 5px;
+  padding: 5px;
+}
+
+.sct-artists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sct-artists .container-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 70%;
+}
+
+.sct-artists .container-cards .card-artist {
+  margin: 10px;
+}
+
+.sct-artists .container-cards .card-artist .card-img {
+  width: 200px;
+  height: 200px;
+}
+
+.sct-artists .container-cards .card-artist .card-img img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.sct-artists .container-cards .card-artist .card-body {
+  color: #0d0d0d;
+}
+
+.sct-artists .container-cards .card-artist .card-body p {
+  text-align: center;
+}
+
+.sct-cardBase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sct-cardBase .container-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 70%;
+}
+
+.sct-cardBase .container-cards .card {
+  margin: 10px;
+}
+
+.sct-cardBase .container-cards .card .card-img {
+  width: 200px;
+  height: 200px;
+}
+
+.sct-cardBase .container-cards .card .card-img img {
+  width: 100%;
+}
+
+.sct-cardBase .container-cards .card .card-body {
+  color: #0d0d0d;
+}
+
+.sct-cardBase .container-cards .card .card-body p {
+  text-align: center;
+}
+
+.sct-dataSong {
+  height: 100vh;
+}
+
+.sct-dataSong .card-songInformation img {
+  width: 200px;
+}
+
+.sct-dataAlbum {
+  height: 90vh;
+}
+
+.sct-dataAlbum .card-albumInformation .container-img {
+  width: 400px;
+}
+
+.sct-dataAlbum .card-albumInformation .container-img img {
+  width: 400px;
+}
+
+.sct-userInformation {
+  background: #0d0d0d;
+  height: 91.5vh;
+  color: #000000;
+}
+
+.sct-userInformation .container-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url("../img/blank-profile-picture-973460_1280.png");
+  background-size: cover;
+}
+
+.sct-userInformation .container-pic img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.link-card:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.display-none {
+  display: none;
+}
+
+.tbl-img img {
+  width: 100px;
+  height: 100px;
+}
+
+.img-register {
+  height: 230px;
+}
+
+.box-tbls {
+  overflow-y: scroll;
+  height: 350px;
+}
+
+.box-tbls::-webkit-scrollbar {
+  border: 2px solid #0d0d0d;
+  border-radius: 8px;
+}
+
+.box-tbls::-webkit-scrollbar-thumb {
+  background: #f2f2f2;
+  border-radius: 10px;
+}
+
+.style-input-error {
+  border: 1px solid red;
+}
+
+.btn-submitImg {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+.header-global {
+  background: #0d0d0d;
+}
+
+.header-global .navbar .nav-link {
+  color: #f2f2f2;
+}
+
+.artistInformation p {
+  font-size: 30px;
+}
+
+.container-copyright {
+  position: absolute;
+  bottom: 0;
+  color: #f2f2f2;
+  font-size: 18px;
+}
+
+.menu-responsive {
+  position: absolute;
+  bottom: 0;
+  color: #f2f2f2;
+  width: 100%;
+  background: #0d0d0d;
+}
+
+.menu-responsive i {
+  font-size: 30px;
+}
+
+.btn-action {
+  border: 1px solid #f2f2f2;
+  background: transparent;
+  padding: 5px 8px 5px 8px;
+  border-radius: 5px;
+  color: #f2f2f2;
+  width: 100px;
+}
+
+.btn-action:hover {
+  color: #F0F0F2;
+  background: #1E82D9;
+}
+
+.menu-user {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: #1A1B1C;
+  border-radius: 10px;
+  right: 20px;
+  top: 30px;
+}
+
+.menu-user .items {
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+}
+
+.sound-doom {
+  font-family: 'DOCALLISME';
+}
+
+.box-tblsDatainformation {
+  overflow-y: scroll;
+  height: 80x;
+}
+
+.box-tblsDatainformation::-webkit-scrollbar {
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+.box-tblsDatainformation::-webkit-scrollbar-thumb {
+  background: #f2f2f2;
+  border-radius: 10px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .sct-login .container-form {
+    width: 90%;
+    border: 1px solid #f2f2f2;
+  }
+  .sct-cardBase .container-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    width: 100%;
+  }
+  .sct-cardBase .container-cards .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .sct-cardBase .container-cards .card .card-img {
+    width: 100px;
+    height: 100px;
+  }
+  .sct-registerArtist .container-img {
+    width: 200px;
+    height: 200px;
+  }
+  .sct-registerArtist .container-img img {
+    width: 200px;
+    height: 200px;
+  }
+  .sct-registerArtist form {
+    width: 350px;
+    height: 350px;
+  }
+  .sct-registerAlbum .container-img {
+    width: 200px;
+    height: 200px;
+  }
+  .sct-registerAlbum .container-img img {
+    width: 200px;
+    height: 200px;
+  }
+  .sct-registerAlbum form {
+    width: 350px;
+    height: 350px;
+  }
+  .artistInformation img {
+    width: 300px;
+  }
+  .artistInformation p {
+    font-size: 25px;
+  }
+  .sct-app .optionRegister-responsive .container-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%;
+  }
+  .sct-app .optionRegister-responsive .container-cards .card-option {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .sct-app .optionRegister-responsive .container-cards .card-option p {
+    color: #f2f2f2;
+  }
+  .sct-app .optionRegister-responsive .container-cards .card-option .card-img {
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+  }
+  .sct-app .optionRegister-responsive .container-cards .card-option .card-img img {
+    width: 100%;
+  }
+  .sct-app .optionRegister-responsive .container-cards .card-option .card-body {
+    color: #0d0d0d;
+  }
+  .sct-app .optionRegister-responsive .container-cards .card-option .card-body p {
+    text-align: center;
+  }
+  .sct-userInformation {
+    height: 92.2vh;
+  }
+  .sct-dataAlbum .card-albumInformation .container-img {
+    width: 300px;
+  }
+  .sct-dataAlbum .card-albumInformation .container-img img {
+    width: 300px;
+  }
+}
+/*# sourceMappingURL=base.css.map */

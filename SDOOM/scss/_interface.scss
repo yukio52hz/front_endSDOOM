@@ -1,0 +1,128 @@
+.display-none {
+    display: none;
+}
+
+.header-principal {
+    background: $black_primary;
+    .logo {
+        img {
+            width: 100px;
+        }
+    }
+    .add-playlist {
+        button {
+            width: 100%;
+            color: $white;
+            background-color: $black_ternary;
+            padding: 10px;
+            border: none;
+            span {
+                padding: 0 4px 0 4px;
+            }
+        }
+    }
+    /*  .container-playlists {
+        overflow-y: scroll;
+        height: 200px;
+        padding-left: 5px;
+        line-height: 16px;
+        &::-webkit-scrollbar {
+            border: 2px solid $black_ternary;
+            border-radius: 8px;
+            width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #f2f2f2;
+            border-radius: 10px;
+            width: 10px;
+        }
+    }*/
+}
+
+.main-contenst {
+    width: 100%;
+    background: $black_secundary;
+    .sct-app {
+        color: $white;
+        .container-fluid {
+            padding-left: 0px;
+            padding-bottom: 0px;
+            .header-secundary {
+                width: 100%;
+                nav {
+                    height: 6vh;
+                }
+                .container-pictureUser {
+                    height: 4vh;
+                    border-radius: 50%;
+                    img {
+                        height: 4vh;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+        .contents-user {
+            height: 94vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .contents-admin {
+            height: 94vh;
+            display: flex;
+            flex-direction: column;
+            .tabs-contents {
+                height: 400px;
+                .nav-tabs {
+                    border-bottom: none;
+                    .nav-link {
+                        color: $white;
+                        &:hover {
+                            border-color: #21B3CF;
+                            isolation: isolate;
+                        }
+                    }
+                }
+                //editar el active
+                .nav-tabs .nav-item.show .nav-link,
+                .nav-tabs .nav-link.active {
+                    color: $black_secundary;
+                    background-color: #fff;
+                    border-color: #dee2e6 #dee2e6 #fff;
+                }
+                .card {
+                    color: $black_secundary;
+                    position: static;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                .container-start {
+                    margin: 8px;
+                    .container-img {
+                        width: 40%;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .widgets-container {
+                margin: 6px;
+                p {
+                    font-size: 50px;
+                }
+                width: 40%;
+                .widget-numberSons,
+                .widget-numberUsers,
+                .widget-numberAlbums {
+                    background: $purple2;
+                    border-radius: 20px;
+                    width: 50%;
+                    margin: 5px;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}

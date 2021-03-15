@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--my styles-->
+    <link rel="stylesheet" href="../css/base.css">
+    <title>Inicio</title>
+</head>
+
+<body class="d-flex">
+    <header class="header-principal col-2 d-none d-lg-block pt-3">
+        <div class="logo d-flex justify-content-center">
+            <img src="../img/logo2.png" alt="SOUD DOOM">
+        </div>
+
+        <nav class="nav flex-column">
+            <a class="nav-link active text-light" aria-current="page" href="#"><i class="fas fa-home pe-2"></i>Inicio</a>
+            <a class="nav-link text-light" href="artists.html"><i class="fas fa-guitar  pe-2"></i>Artistas</a>
+            <a class="nav-link text-light" href="songs.html"><i class="fas fa-music  pe-2"></i>Canciones</a>
+            <a class="nav-link text-light" href="albums.html"><i class="fas fa-compact-disc  pe-2"></i>Albums</a>
+
+        </nav>
+        <div class="add-playlist">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#modalAdd_playlist"><span><i class="fas fa-plus-circle"></i></span></i>Crear playlist</button>
+        </div>
+        <div class="container-copyright d-flex ps-5">
+            <i class="far fa-copyright"></i>
+            <h2 class="glitch" data-text="Yukio52hz">Yukio52hz</h2>
+        </div>
+        <!--<div>
+            <div class="add-playlist">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#modalAdd_playlist"><span><i class="fas fa-plus-circle"></i></span></i>Crear playlist</button>
+            </div>
+            <p class="text-center">---Biblioteca---</p>
+            <div class="container-playlists text-light">
+                <table class="table" id="tbl-playlistMenu">
+                    <tbody class="text-light"></tbody>
+                </table>
+            </div>
+
+        </div>-->
+    </header>
+    <main class="main-contenst">
+        <section class="sct-app d-flex">
+            <div class="container-fluid d-flex flex-column">
+                <!--Submenu-->
+                <header class="header-secundary container-fluid">
+                    <nav class="d-flex justify-content-between justify-content-lg-end">
+                        <div class="d-flex d-lg-none pt-2 ps-2">
+                            <h2 class="sound-doom">SOUND DOOM</h2>
+                        </div>
+                        <div class=" d-flex align-items-center pt-2 ">
+                            <div class="container-pictureUser">
+                                <img src="" alt="pic usuario" id="pick-userInterface">
+                            </div>
+                            <p id="name-user" class="link-card pt-2 ps-2"></p>
+                        </div>
+                    </nav>
+                </header>
+                <!--opciones de información del usuario-->
+                <div class="menu-user" id="menu-user">
+                    <div class="d-flex flex-column">
+                        <nav class="nav flex-column">
+                            <a class="nav-link link-card" aria-current="page" href="user-information.html"><i class="far fa-user pe-1"></i>Perfil</a>
+                            <a class="nav-link link-card" id="sing-off"><i class="fas fa-mitten pe-1"></i>Cerrar sesión</a>
+                        </nav>
+                    </div>
+                </div>
+                <!--Contenido del usuario-->
+                <!--Modal crear playlist-->
+                <div class="contents-user">
+                    <!--playlists del usuario-->
+                    <div class="d-flex justify-content-lg-end">
+
+                        <div class="box-tbls col-lg-6">
+                            <h2>Playlists del usuario</h2>
+                            <table class="table table-dark table-striped table-hover" id="tbl-playlistMenu">
+                                <tbody class="text-light"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="modal fade" id="modalAdd_playlist" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-dark" id="staticBackdropLabel">Ponle nombre a la playlist</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="" class="d-flex  flex-column align-items-center justify-content-center">
+                                        <div class="col-8">
+                                            <input type="text" class="form-control" placeholder="Nombre de la playlist" id="txt-playlist" required>
+                                        </div>
+                                        <p id="txt-error" class="text-dark"></p>
+                                        <div class="pt-3 d-flex">
+                                            <div class="pe-2">
+                                                <button id="btn-createPlaylist" type="button" class="btn btn-primary">Crear</button>
+                                            </div>
+                                            <div class="pe-2">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancelar</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Modal agregar canciones playlist-->
+                    <div class="modal fade" id="modalAdd_songsPlaylist" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 id="name-art"></h2><br>
+                                    <h5 class="modal-title text-dark" id="staticBackdropLabel">Canciones</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <table id="tbl-songsChoose" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th>Artista</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="addSongPlaylists">Agregar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <!--Contenido del administrador-->
+                <div class="contents-admin">
+                    <div class="tabs-contents">
+                        <!--Botones de los tabs-->
+                        <div class="nav nav-tabs justify-content-lg-center flex-lg-wrap flex-nowrap " id="nav-tab" role="tablist">
+
+                            <button class="nav-link" id="nav-register-tab" data-bs-toggle="tab" data-bs-target="#nav-register" type="button" role="tab" aria-controls="nav-register" aria-selected="true">Registrar</button>
+                            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Artistas</button>
+                            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-album" type="button" role="tab" aria-controls="nav-album" aria-selected="false">Álbums</button>
+                            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Canciones</button>
+                        </div>
+                        <div class="tab-content" id="nav-tabContent">
+
+                            <!--Selecion de que desea registrar-->
+                            <div class="tab-pane fade show active" id="nav-register" role="tabpanel" aria-labelledby="nav-register-tab">
+                                <!--opciones de registro responsive-->
+                                <div class="optionRegister-responsive d-lg-none d-sm-none pt-5">
+                                    <div class="container-cards">
+                                        <div class="card-option" onclick="location.href='register_artist.html'">
+                                            <div class="card-img">
+                                                <img src="../img/artista.jpg" alt="...">
+                                            </div>
+                                            <div class="card-body pt-3">
+                                                <p>Registar Artista</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-option" onclick="location.href='register_album.html'">
+                                            <div class="card-img">
+                                                <img src="../img/album.jpg" alt="...">
+                                            </div>
+                                            <div class="card-body pt-3">
+                                                <p>Registar álbum</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-option" onclick="location.href='register_song.html'">
+                                            <div class="card-img">
+                                                <img src="../img/musica.jpg" alt="...">
+                                            </div>
+                                            <div class="card-body pt-3">
+                                                <p>Registrar canción</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--opciones de registro responsive-->
+                                <div class="d-flex justify-content-around pt-3">
+                                    <div class="card d-none d-lg-block" style="width: 18rem;" onclick="location.href='register_artist.html'">
+                                        <img src="../img/artista.jpg" class="card-img-top img-register" alt="...">
+                                        <div class="card-body">
+                                            <h3>Registar Artista</h3>
+                                            <p class="card-text">Formulario donde puedes registrar los datos de un artista</p>
+                                        </div>
+                                    </div>
+                                    <div class="card d-none d-lg-block" style="width: 18rem;" onclick="location.href='register_album.html'">
+                                        <img src="../img/album.jpg" class="card-img-top img-register" alt="...">
+                                        <div class="card-body">
+                                            <h3>Registrar Álbum</h3>
+                                            <p class="card-text">Formulario donde puedes registrar los datos de un álbum</p>
+                                        </div>
+                                    </div>
+                                    <div class="card d-none d-lg-block" style="width: 18rem;" onclick="location.href='register_song.html'">
+                                        <img src="../img/musica.jpg" class="card-img-top img-register" alt="...">
+                                        <div class="card-body">
+                                            <h3>Registrar canción</h3>
+                                            <p class="card-text">Formulario donde puedes registrar los datos de una canción</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Tab donde esta la tabla de artistas-->
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <div class="box-tbls col-lg-12">
+                                    <table class="table table-dark table-striped table-hover" id="tbl-artist">
+                                        <thead>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--Tab donde esta la tabla de album-->
+                            <div class="tab-pane fade" id="nav-album" role="tabpanel" aria-labelledby="nav-album-tab">
+                                <div class="box-tbls col-lg-12">
+                                    <table class="table  table-dark table-hover" id="tbl-album">
+                                        <thead>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--Tab donde esta la tabla de canciones-->
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <div class="box-tbls col-lg-12">
+                                    <table class="table  table-dark table-hover" id="tbl-song">
+                                        <thead>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="widgets-container d-none d-lg-block">
+                        <h2 class="text-center">Datos de la plataforma</h2>
+                        <div class="d-flex justify-content-around">
+                            <div class="widget-numberAlbums">
+                                <h3 class="text-center">Artistas</h3>
+                                <p id="length-artists" class="text-center"></p>
+                            </div>
+                            <div class="widget-numberUsers">
+                                <h3 class="text-center">Álbums</h3>
+                                <p id="length-albums" class="text-center"></p>
+                            </div>
+                            <div class="widget-numberSons">
+                                <h3 class="text-center">Canciones</h3>
+                                <p id="length-songs" class="text-center"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Menu de navegacion del usuario-->
+            <div class="d-flex menu-responsive justify-content-around d-lg-none d-sm-none">
+                <a class="nav-link active" aria-current="page" href="SDOOM.html"><i class="fas fa-home"></i></a>
+                <a class="nav-link" href="artists.html"><i class="fas fa-guitar"></i></a>
+                <a class="nav-link" href="songs.html"><i class="fas fa-music"></i></a>
+                <a class="nav-link" href="albums.html"><i class="fas fa-compact-disc"></i></a>
+            </div>
+        </section>
+        <!--Modal de agregar albums-->
+        <div class="modal fade" id="modalAdd_album" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 id="name-artist"></h2><br>
+                        <h5 class="modal-title" id="staticBackdropLabel">Albums</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <table id="tbl-addAlbums" class="table">
+                            <thead>
+                                <tr>
+                                    <th>Cover</th>
+                                    <th>Nombre álbum</th>
+                                    <th>Elegir</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="btn-addAlbums">Agregar</button>
+                    </div>
+                </div>
+    </main>
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+    <!--axios script-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--sweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!--fontawesome-->
+    <script src="https://kit.fontawesome.com/4fca3f5832.js" crossorigin="anonymous"></script>
+    <!--My scripts-->
+    <script src="../js/user.js"></script>
+    <script src="../js/artist.js"></script>
+    <script src="../js/song.js"></script>
+    <script src="../js/album.js"></script>
+    <script src="../js/playlist.js"></script>
+    <script src="../js/services.js"></script>
+    <script src="../js/manager.js"></script>
+    <script src="../js/interface.js"></script>
+    <script src="../js/listGlobalObjects.js"></script>
+    <script src="../js/add_albums.js"></script>
+    <script src="../js/register_playlist.js"></script>
+    <script src="../js/add_songs.js"></script>
+</body>
+
+</html>

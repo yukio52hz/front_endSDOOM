@@ -1,0 +1,128 @@
+.sct-login {
+    height: 100vh;
+    background: $black_ternary;
+    color: $white;
+    .container-form {
+        border-radius: 10px;
+        background: $black_primary;
+        width: 60%;
+    }
+    form {
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        label {
+            color: $white;
+        }
+        .container-email,
+        .container-password {
+            border-bottom: white 2px solid;
+        }
+        input {
+            width: 250px;
+            outline: none;
+            border: none;
+            background: transparent;
+            color: white
+        }
+        i {
+            color: $white;
+        }
+        button {
+            @include button-call-to-action2(transparent, 245px, $white, $white, $blue)
+        }
+    }
+    .img-login {
+        width: 500px;
+        height: 500px;
+        color: white;
+        img {
+            width: 100%;
+        }
+        button {
+            @include button-call-to-action2 (transparent, 100px, $white, $white, $blue)
+        }
+    }
+}
+
+.sct-account-type {
+    .card {
+        border: 1px solid $black_ternary;
+        button {
+            @include button-call-to-action2 ($blue, 100px, $white2, $white, $black_secundary)
+        }
+    }
+}
+
+.sct-registerUsers {
+    form {
+        i {
+            color: $black_secundary;
+        }
+        button {
+            @include button-call-to-action2($blue, 300px, $white, $white, $black_primary)
+        }
+    }
+}
+
+.sct-registerArtist,
+.sct-registerAlbum,
+.sct-registerSong,
+.sct-modifySong {
+    height: 93vh;
+    background: $black_primary;
+    color: $white;
+}
+
+.sct-registerArtist {
+    .container-img {
+        background-image: url('../img/22.png');
+        background-size: contain;
+        background-position: center;
+        background-color: $white;
+        width: 300px;
+        height: 300px;
+        img {
+            width: 100%;
+        }
+    }
+    form {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.sct-registerAlbum {
+    .container-img {
+        background-image: url('../img/22.png');
+        background-size: contain;
+        background-position: center;
+        background-color: $white;
+        width: 300px;
+        height: 300px;
+        img {
+            width: 100%;
+        }
+    }
+    form {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.sct-registerSong {
+    form {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.sct-modifySong {
+    .card {
+        background-color: blue;
+    }
+}

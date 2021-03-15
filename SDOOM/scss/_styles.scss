@@ -1,0 +1,113 @@
+.link-card {
+    &:hover {
+        text-decoration-line: underline;
+        cursor: pointer;
+    }
+}
+
+.display-none {
+    display: none;
+}
+
+.tbl-img {
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.img-register {
+    height: 230px;
+}
+
+.box-tbls {
+    overflow-y: scroll;
+    height: 350px;
+    &::-webkit-scrollbar {
+        border: 2px solid $black_primary;
+        border-radius: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #f2f2f2;
+        border-radius: 10px;
+    }
+}
+
+.style-input-error {
+    border: 1px solid red;
+}
+
+.btn-submitImg {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+.header-global {
+    background: $black_primary;
+    .navbar {
+        .nav-link {
+            color: $white;
+        }
+    }
+}
+
+.artistInformation {
+    p {
+        font-size: 30px;
+    }
+}
+
+.container-copyright {
+    position: absolute;
+    bottom: 0;
+    color: $white;
+    font-size: 18px;
+}
+
+.menu-responsive {
+    position: absolute;
+    bottom: 0;
+    color: $white;
+    width: 100%;
+    background: $black_primary;
+    i {
+        font-size: 30px;
+    }
+}
+
+.btn-action {
+    @include button-call-to-action2 (transparent, 100px, $white, $white, $blue)
+}
+
+.menu-user {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: $black_ternary;
+    border-radius: 10px;
+    right: 20px;
+    top: 30px;
+    .items {
+        border: 1px solid $white;
+        border-radius: 10px;
+    }
+}
+
+.sound-doom {
+    font-family: 'DOCALLISME';
+}
+
+.box-tblsDatainformation {
+    overflow-y: scroll;
+    height: 80x;
+    &::-webkit-scrollbar {
+        border: 2px solid white;
+        border-radius: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #f2f2f2;
+        border-radius: 10px;
+    }
+}

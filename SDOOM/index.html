@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="img/favicon.jpg" type="image/jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--my styles-->
+    <link rel="stylesheet" href="css/base.css">
+    <title>Inicio de seción</title>
+</head>
+
+<body>
+    <main>
+        <section class="sct-login container-fluid d-flex align-items-center justify-content-center justify-content-lg-around">
+            <div class="container-form container-fluid d-flex align-items-center justify-content-center justify-content-lg-around">
+                <form class="">
+                    <img src="img/logo2.png" alt="" width="200px" alt="SOUND-DOOM">
+                    <p id="txt-error"></p>
+                    <div class=" pt-3 d-flex flex-column">
+                        <label for="txt-email" class="pb-1">Direción de correo</label>
+                        <div class="container-email d-flex">
+                            <i class="fas fa-user align-self-center"></i> <input type="text" id="txt-email" placeholder="Digite su correo eléctronico" required>
+                        </div>
+                    </div>
+                    <div class=" pt-2 d-flex flex-column">
+                        <label for="txt-passwordUser" class="pb-1">Contraseña</label>
+                        <div class="container-password d-flex">
+
+                            <input type="password" id="txt-passwordUser" placeholder="Digite su contraseña" required>
+                            <span class="password-eyeLogin align-self-center"></span>
+                        </div>
+                    </div>
+                    <div class=" pt-3">
+                        <button id="btn-login" type="button">Iniciar sesión</button>
+                    </div>
+                    <a href="views/account-type.html" class="d-lg-none"> Registrarce</a>
+                </form>
+                <div class="img-login d-none d-lg-block">
+                    <div class="text-center pt-3">
+                        <h2>Hola! bienvenido <span>SDOOM</span></h2>
+                        <p>Es una aplicación gratis donde puedes escuchar música</p>
+                        <p>Aún no tienes cuenta</p>
+                        <a href="views/account-type.html"><button>Registrate</button></a>
+                        <!-- onclick="location.href='views/date.html'"-->
+                    </div>
+                    <img src="img/Music_Flatline.svg">
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+    <!--sweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!--axios script-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--fontawesome-->
+    <script src="https://kit.fontawesome.com/4fca3f5832.js" crossorigin="anonymous"></script>
+    <!--My scripts-->
+    <script src="js/user.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/manager.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

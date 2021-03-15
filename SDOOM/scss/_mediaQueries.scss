@@ -1,0 +1,104 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .sct-login {
+        .container-form {
+            width: 90%;
+            border: 1px solid $white;
+        }
+    }
+    .sct-cardBase {
+        .container-cards {
+            display: flex;
+            flex-flow: row;
+            flex-direction: column;
+            width: 100%;
+            .card {
+                display: flex;
+                flex-direction: row;
+                .card-img {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+    }
+    .sct-registerArtist {
+        .container-img {
+            width: 200px;
+            height: 200px;
+            img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        form {
+            width: 350px;
+            height: 350px;
+        }
+    }
+    .sct-registerAlbum {
+        .container-img {
+            width: 200px;
+            height: 200px;
+            img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        form {
+            width: 350px;
+            height: 350px;
+        }
+    }
+    .artistInformation {
+        img {
+            width: 300px;
+        }
+        p {
+            font-size: 25px;
+        }
+    }
+    .sct-app {
+        .optionRegister-responsive {
+            .container-cards {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                .card-option {
+                    display: flex;
+                    p {
+                        color: $white;
+                    }
+                    .card-img {
+                        width: 100px;
+                        height: 100px;
+                        margin: 15px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .card-body {
+                        color: $black_primary;
+                        p {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sct-userInformation {
+        height: 92.2vh;
+    }
+    .sct-dataAlbum {
+        .card-albumInformation {
+            .container-img {
+                width: 300px;
+                img {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width:1336px) {}

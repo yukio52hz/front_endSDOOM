@@ -1,0 +1,90 @@
+.sct-artists {
+    display: flex;
+    justify-content: center;
+    .container-cards {
+        display: flex;
+        flex-flow: row wrap;
+        width: 70%;
+        .card-artist {
+            margin: 10px;
+            .card-img {
+                width: 200px;
+                height: 200px;
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
+            .card-body {
+                color: $black_primary;
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.sct-cardBase {
+    display: flex;
+    justify-content: center;
+    .container-cards {
+        display: flex;
+        flex-flow: row wrap;
+        width: 70%;
+        .card {
+            margin: 10px;
+            .card-img {
+                width: 200px;
+                height: 200px;
+                img {
+                    width: 100%;
+                }
+            }
+            .card-body {
+                color: $black_primary;
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.sct-dataSong {
+    height: 100vh;
+    .card-songInformation {
+        img {
+            width: 200px;
+        }
+    }
+}
+
+.sct-dataAlbum {
+    height: 90vh;
+    .card-albumInformation {
+        .container-img {
+            width: 400px;
+            img {
+                width: 400px;
+            }
+        }
+    }
+}
+
+.sct-userInformation {
+    background: $black_primary;
+    height: 91.5vh;
+    color: $black_secundary;
+    .container-pic {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: url('../img/blank-profile-picture-973460_1280.png');
+        background-size: cover;
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+}
