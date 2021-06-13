@@ -1,9 +1,21 @@
 .display-none {
     display: none;
 }
-
+body{
+    background: $black_secundary;
+    &::-webkit-scrollbar {
+        border: 2px solid $black_primary;
+        border-radius: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $black_primary;
+        border-radius: 10px;
+    }
+}
 .header-principal {
     background: $black_primary;
+    position: fixed;
+    height: 100vh;
     .logo {
         img {
             width: 100px;
@@ -39,9 +51,10 @@
     }*/
 }
 
-.main-contenst {
-    width: 100%;
-    background: $black_secundary;
+.main-content {
+    position: absolute;
+    width: 84%;
+    right: 0px;
     .sct-app {
         color: $white;
         .container-fluid {

@@ -57,7 +57,12 @@
             font-size: 25px;
         }
     }
+    .main-content {
+        position: absolute;
+        width: 100%;
+    }
     .sct-app {
+    
         .optionRegister-responsive {
             .container-cards {
                 display: flex;
@@ -101,4 +106,9 @@
     }
 }
 
-@media only screen and (min-width: 600px) and (max-width:1336px) {}
+@media only screen and (min-width: 600px) and (max-width:1336px) {
+    .main-content {
+        position: absolute;
+        width: 100%;
+    }
+}

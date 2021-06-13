@@ -4,7 +4,8 @@
 const input_name = document.querySelector('#txt-name');
 const slt_artists = document.querySelector('#slt-nameArtist');
 const slt_album = document.querySelector('#slt-nameAlbum');
-const input_time = document.querySelector('#txt-legth_song');
+const input_timeOne = document.querySelector('#txt-legth_songOne');
+const input_timeTwo = document.querySelector('#txt-legth_songTwo');
 const txt_error = document.querySelector('#txt-error');
 
 //btn modify
@@ -33,7 +34,10 @@ const data_song = () => {
 
         slt_album.value = 'Sin álbum definido'
     }
-    input_time.value = song.length_song;
+    let time = song.length_song.toString();
+    let data_time = time.split('.');
+    input_timeOne.value = data_time[0]
+    input_timeTwo.value = data_time[1]
 };
 //el mismo proceso de registrar pero esta vez lo modificamos
 const slt_loadArtist = async() => {
@@ -79,7 +83,7 @@ const modify_song = () => {
         let name = input_name.value;
         //comienzo de nuevo a transformar el artista selecionado en objeto
         let select_artist = JSON.parse(slt_artists.value);
-        let time = input_time.value;
+        let time = input_timeOne.value+'.'+input_timeTwo.value;
         let artist = new Artist(select_artist.name, select_artist.record_house, new Date(select_artist.birth_date), select_artist.profile_picture, select_artist.age, select_artist.albums)
         artist.set_id(select_artist._id)
         artist.calculate_age();

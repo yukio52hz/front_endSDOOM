@@ -3,7 +3,8 @@
 const input_name = document.querySelector('#txt-name');
 const slt_artists = document.querySelector('#slt-nameArtist');
 const slt_album = document.querySelector('#slt-nameAlbum');
-const input_time = document.querySelector('#txt-legth_song');
+const input_timeOne = document.querySelector('#txt-legth_songOne');
+const input_timeTwo = document.querySelector('#txt-legth_songTwo');
 const txt_error = document.querySelector('#txt-error');
 const btn_register = document.querySelector('#btn-register');
 
@@ -13,7 +14,8 @@ const cleanUp_form = () => {
     input_name.value = '';
     slt_artists.value = '';
     slt_album.value = '';
-    input_time.value = '';
+    input_timeOne.value = '';
+    input_timeTwo.value = '';
 };
 const slt_loadArtist = async() => {
     let artist = await manager.get_listArtists();
@@ -56,7 +58,7 @@ const registering_song = () => {
         let name = input_name.value;
         //comienzo de nuevo a transformar el artista selecionado en objeto
         let select_artist = JSON.parse(slt_artists.value);
-        let time = input_time.value;
+        let time = input_timeOne.value+'.'+input_timeTwo.value;
         let artist = new Artist(select_artist.name, select_artist.record_house, new Date(select_artist.birth_date), select_artist.profile_picture, select_artist.age, select_artist.albums)
         artist.set_id(select_artist._id)
         artist.calculate_age();

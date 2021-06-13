@@ -11,7 +11,7 @@
     <title>Inicio</title>
 </head>
 
-<body class="d-flex">
+<body>
     <header class="header-principal col-2 d-none d-lg-block pt-3">
         <div class="logo d-flex justify-content-center">
             <img src="../img/logo2.png" alt="SOUD DOOM">
@@ -24,7 +24,7 @@
             <a class="nav-link text-light" href="albums.html"><i class="fas fa-compact-disc  pe-2"></i>Albums</a>
 
         </nav>
-        <div class="add-playlist">
+        <div class="add-playlist" id="create-playlist">
             <button type="button" data-bs-toggle="modal" data-bs-target="#modalAdd_playlist"><span><i class="fas fa-plus-circle"></i></span></i>Crear playlist</button>
         </div>
         <div class="container-copyright d-flex ps-5">
@@ -44,7 +44,7 @@
 
         </div>-->
     </header>
-    <main class="main-contenst">
+    <main class="main-content">
         <section class="sct-app d-flex">
             <div class="container-fluid d-flex flex-column">
                 <!--Submenu-->
@@ -76,7 +76,7 @@
                     <!--playlists del usuario-->
                     <div class="d-flex justify-content-lg-end">
 
-                        <div class="box-tbls col-lg-6">
+                        <div class="box-tbls col-lg-6 col-12">
                             <h2>Playlists del usuario</h2>
                             <table class="table table-dark table-striped table-hover" id="tbl-playlistMenu">
                                 <tbody class="text-light"></tbody>
@@ -145,7 +145,6 @@
                     <div class="tabs-contents">
                         <!--Botones de los tabs-->
                         <div class="nav nav-tabs justify-content-lg-center flex-lg-wrap flex-nowrap " id="nav-tab" role="tablist">
-
                             <button class="nav-link" id="nav-register-tab" data-bs-toggle="tab" data-bs-target="#nav-register" type="button" role="tab" aria-controls="nav-register" aria-selected="true">Registrar</button>
                             <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Artistas</button>
                             <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-album" type="button" role="tab" aria-controls="nav-album" aria-selected="false">Álbums</button>
@@ -156,7 +155,7 @@
                             <!--Selecion de que desea registrar-->
                             <div class="tab-pane fade show active" id="nav-register" role="tabpanel" aria-labelledby="nav-register-tab">
                                 <!--opciones de registro responsive-->
-                                <div class="optionRegister-responsive d-lg-none d-sm-none pt-5">
+                                <div class="optionRegister-responsive d-lg-none  d-sm-none pt-5">
                                     <div class="container-cards">
                                         <div class="card-option" onclick="location.href='register_artist.html'">
                                             <div class="card-img">
@@ -185,27 +184,44 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!--opciones de registro responsive-->
-                                <div class="d-flex justify-content-around pt-3">
-                                    <div class="card d-none d-lg-block" style="width: 18rem;" onclick="location.href='register_artist.html'">
+                                <!--opciones de registro -->
+                                <div class="d-flex justify-content-lg-around justify-content-md-center flex-md-wrap pt-3">
+                                    <div class="card d-none d-lg-block d-md-block" style="width: 18rem;" onclick="location.href='register_artist.html'">
                                         <img src="../img/artista.jpg" class="card-img-top img-register" alt="...">
                                         <div class="card-body">
                                             <h3>Registar Artista</h3>
                                             <p class="card-text">Formulario donde puedes registrar los datos de un artista</p>
                                         </div>
                                     </div>
-                                    <div class="card d-none d-lg-block" style="width: 18rem;" onclick="location.href='register_album.html'">
+                                    <div class="card d-none d-lg-block d-md-block" style="width: 18rem;" onclick="location.href='register_album.html'">
                                         <img src="../img/album.jpg" class="card-img-top img-register" alt="...">
                                         <div class="card-body">
                                             <h3>Registrar Álbum</h3>
                                             <p class="card-text">Formulario donde puedes registrar los datos de un álbum</p>
                                         </div>
                                     </div>
-                                    <div class="card d-none d-lg-block" style="width: 18rem;" onclick="location.href='register_song.html'">
+                                    <div class="card d-none d-lg-block d-md-block" style="width: 18rem;" onclick="location.href='register_song.html'">
                                         <img src="../img/musica.jpg" class="card-img-top img-register" alt="...">
                                         <div class="card-body">
                                             <h3>Registrar canción</h3>
                                             <p class="card-text">Formulario donde puedes registrar los datos de una canción</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widgets-container d-none d-lg-block">
+                                    <h2 class="text-center">Datos de la plataforma</h2>
+                                    <div class="d-flex justify-content-around">
+                                        <div class="widget-numberAlbums">
+                                            <h3 class="text-center">Artistas</h3>
+                                            <p id="length-artists" class="text-center"></p>
+                                        </div>
+                                        <div class="widget-numberUsers">
+                                            <h3 class="text-center">Álbums</h3>
+                                            <p id="length-albums" class="text-center"></p>
+                                        </div>
+                                        <div class="widget-numberSons">
+                                            <h3 class="text-center">Canciones</h3>
+                                            <p id="length-songs" class="text-center"></p>
                                         </div>
                                     </div>
                                 </div>
@@ -237,7 +253,7 @@
                             <!--Tab donde esta la tabla de canciones-->
                             <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                                 <div class="box-tbls col-lg-12">
-                                    <table class="table  table-dark table-hover" id="tbl-song">
+                                    <table class="table   table-dark table-hover" id="tbl-song">
                                         <thead>
                                         </thead>
                                         <tbody>
@@ -249,23 +265,7 @@
                         </div>
                     </div>
 
-                    <div class="widgets-container d-none d-lg-block">
-                        <h2 class="text-center">Datos de la plataforma</h2>
-                        <div class="d-flex justify-content-around">
-                            <div class="widget-numberAlbums">
-                                <h3 class="text-center">Artistas</h3>
-                                <p id="length-artists" class="text-center"></p>
-                            </div>
-                            <div class="widget-numberUsers">
-                                <h3 class="text-center">Álbums</h3>
-                                <p id="length-albums" class="text-center"></p>
-                            </div>
-                            <div class="widget-numberSons">
-                                <h3 class="text-center">Canciones</h3>
-                                <p id="length-songs" class="text-center"></p>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             <!--Menu de navegacion del usuario-->

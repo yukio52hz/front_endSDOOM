@@ -60,24 +60,32 @@
                 <form class="d-flex col-lg-3 flex-column align-items-center">
                     <p id="txt-error"></p>
                     <div class="col-lg-10 pt-3">
-                        <input type="text" id="txt-name" placeholder="Nombre de la canción" class="form-control" required>
+                        <label for="txt-name">Nombre de la canción</label>
+                        <input type="text" id="txt-name"  class="form-control" required>
                     </div>
-                    <div class="col-lg-10 pt-3">
+                    <div class="col-lg-10 col-8 pt-3">
+                        <label for="slt-nameArtist">Nombre del artista</label>
                         <select name="" id="slt-nameArtist" class="form-control" required>
-                       <option value="">Nombre del artista</option>
+                       <option value="">Artista</option>
                    </select>
                     </div>
                     <div class="col-lg-10 col-8 pt-3">
+                        <label for="slt-nameAlbum">Nombre del álbum</label>
                         <select name="" id="slt-nameAlbum" class="form-control" required>
-                        <option value="">Nombre del álbum</option>
+                        <option value="">Álbum</option>
                         <option value="sin álbum definido">Álbum no definido</option>
                     </select>
                     </div>
                     <div class="col-lg-10 col-8 pt-3">
                         <label for="txt-legth_song">Duración de la cación</label>
-                        <input type="number" id="txt-legth_song" class="form-control" placeholder="3,45" required>
+                     <div class="d-flex">
+                        <input type="number" id="txt-legth_songOne" min="1" max="24" placeholder="1" required>
+                        <span >:</span>
+                        <input type="number" id="txt-legth_songTwo"  min="00" max="60" placeholder="00" required>
+                        <i class="far fa-clock"></i>
+                     </div>
                     </div>
-                    <div class="col-lg-10 pt-3">
+                    <div class="col-lg-10 pt-3 ">
                         <button id="btn-register" type="button" class="btn-action">Registrar</button>
                     </div>
                 </form>

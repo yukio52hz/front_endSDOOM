@@ -31,6 +31,7 @@ if (user_logged.get_type() == "Premium" || user_logged.get_type() == 'Normal') {
 } else {
     document.querySelector('.contents-user').style.display = 'none';
     document.querySelector('.contents-admin').style.display = 'block';
+    document.querySelector('#create-playlist').style.display = 'none';
 };
 //se muestra la foto del usuario
 if (user_logged.get_profilePicture()) {

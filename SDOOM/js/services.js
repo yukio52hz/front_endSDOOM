@@ -29,7 +29,7 @@ const get_data = async(endpoint) => {
         url: `${server}${endpoint}`,
         responseType: 'json',
     }).then((res) => {
-        list = res.data.list
+        list = res.data.list //el data si son los datos xd
         console.log(res.data.msj);
     }).catch((err) => {
         console.log(`No sé pudo establecer la comunicación con el servidor, 
